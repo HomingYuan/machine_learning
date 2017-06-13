@@ -1,4 +1,4 @@
-1. file not exist
+1. file not exist (just for jupyter)
 	1. jupyter(ipynb) the path is what exactly it locate, 
 	2. So first check path, import os, os.path.abspath('')
 	3. Put file on path, os.path.abspath('')
