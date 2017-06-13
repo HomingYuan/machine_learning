@@ -137,7 +137,7 @@ knn.fit(iris_x_train, iris_y_train)
 print(knn.predict(iris_x_test),'\n',iris_y_test)
 '''
 # Linear model: from regression to sparsity
-
+'''
 diabetes = datasets.load_diabetes()
 diabetes_X_train = diabetes.data[:-20]
 diabetes_X_test = diabetes.data[-20:]
@@ -157,6 +157,7 @@ X = np.c_[ .5, 1].T
 y = [.5, 1]
 test = np.c_[ 0, 2].T
 regr = linear_model.LinearRegression()
+'''
 import matplotlib.pyplot as plt
 '''
 plt.figure()     
@@ -186,6 +187,7 @@ plt.savefig('ridgeregression_stable.pdf')
 '''
 
 # Sparsity
+'''
 alphas = np.logspace(-4, -1, 6)
 regr = linear_model.Lasso()
 scores = [regr.set_params(alpha=alpha
@@ -196,13 +198,96 @@ best_alpha = alphas[scores.index(max(scores))]
 regr.alpha = best_alpha
 regr.fit(diabetes_X_train, diabetes_y_train)
 print(regr.coef_)
-     
-     
-     
-     
+'''
+# classification
+'''
+from sklearn import datasets
+from sklearn import linear_model
+logistic = linear_model.LogisticRegression(C=1e5)
+np.random.seed(0)
+indices = np.random.permutation(len(iris_x))  #permuation split the data randomly
+iris_x_train = iris_x[indices[:-10]]
+iris_y_train = iris_y[indices[:-10]]
+iris_x_test = iris_x[indices[-10:]]
+iris_y_test = iris_y[indices[-10:]]
+logistic.fit(iris_x_train, iris_y_train)
+regr = linear_model.LinearRegression()
+regr.fit(iris_x_train, iris_y_train)
+import matplotlib.pyplot as plt
+log = plt.figure()
+plt.plot(iris_x_test, logistic.predict(iris_x_test),color='r')
+plt.plot(iris_x_test, regr.predict(iris_x_test),color='g')
+plt.show()
+'''
 
+# Support vector machines
+# Linear SVMs
+'''
+from sklearn import svm
+indices = np.random.permutation(len(iris_x))
+iris_x_train = iris_x[indices[:-10]]
+iris_y_train = iris_y[indices[:-10]]
+iris_x_test = iris_x[indices[-10:]]
+iris_y_test = iris_y[indices[-10:]]
+#svc = svm.SVC(kernel='linear')
+svc = svm.SVC(kernel='poly',degree=3)
+svc.fit(iris_x_train, iris_y_train)
+import matplotlib.pyplot as plt
+plt.figure()
+plt.plot(iris_x_test, svc.predict(iris_x_test))
+plt.show()
+'''
+# 2.2.3 Model selection: choosing estimators and their parameters
+# Score, and cross-validated scores
+'''
+from sklearn import datasets, svm
+digits = datasets.load_digits()
+X_digits = digits.data
+y_digits = digits.target
+svc = svm.SVC(C=1, kernel='linear')
+print(svc.fit(X_digits[:-100], y_digits[:-100]).score(X_digits[-100:], y_digits[-100:]))
+import numpy as np
+X_folds = np.array_split(X_digits, 3)  # split data into 3
+y_folds = np.array_split(y_digits, 3)
+scores = list()
+for k in range(3):
+     # We use 'list' to copy, in order to 'pop' later on
 
+    X_train = list(X_folds)
 
+    X_test = X_train.pop(k)
 
+    X_train = np.concatenate(X_train)
 
+    y_train = list(y_folds)
 
+    y_test = y_train.pop(k)
+
+    y_train = np.concatenate(y_train)
+
+    scores.append(svc.fit(X_train, y_train).score(X_test, y_test))
+print(scores)
+# Cross-validation generators
+from sklearn.model_selection import KFold,cross_val_score
+X = ["a", "a", "b", "c", "c", "c"]
+k_fold = KFold(n_splits=3)
+for train_indices, test_indices in k_fold.split(X):
+    print('Train: %s | test: %s' % (train_indices, test_indices))
+svc_data = [svc.fit(X_digits[train], y_digits[train]).score(X_digits[test], y_digits[test])for train, test in k_fold.split(X_digits)]
+print(svc_data)
+print(cross_val_score(svc, X_digits, y_digits, cv=k_fold, n_jobs=-1))
+print(cross_val_score(svc, X_digits, y_digits, cv=k_fold, scoring='precision_macro'))
+
+import numpy as np
+from sklearn.model_selection import cross_val_score
+from sklearn import datasets, svm
+digits = datasets.load_digits()
+X = digits.data
+y = digits.target
+svc = svm.SVC(kernel='linear')
+C_s = np.logspace(-10, 0, 10)
+'''
+# Grid-search and cross-validated estimators
+# Grid-search
+# 2.2.4 Unsupervised learning: seeking representations of the data
+# Clustering: grouping observations together
