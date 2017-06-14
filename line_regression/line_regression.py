@@ -114,6 +114,7 @@ print(data.shape)
 # estumators object has no example
 # 2.2.2 Supervised learning: predicting an output variable from high-dimensional observations
 # Nearest neighbor and the curse of dimensionality
+'''
 import numpy as np
 from sklearn import datasets
 iris = datasets.load_iris()
@@ -123,6 +124,7 @@ iris_y = iris.target
 #print(iris_y)
 # k-Nearest neighbors classifier
 # KNN (k nearest neighbors) classification example
+'''
 '''
 np.random.seed(0)
 indices = np.random.permutation(len(iris_x))  #permuation split the data randomly
@@ -291,3 +293,164 @@ C_s = np.logspace(-10, 0, 10)
 # Grid-search
 # 2.2.4 Unsupervised learning: seeking representations of the data
 # Clustering: grouping observations together
+
+
+# Principal component analysis: PCA
+
+ # Create a signal with only 2 useful dimensions
+'''
+x1 = np.random.normal(size=100)
+x2 = np.random.normal(size=100)
+x3 = x1 + x2
+X = np.c_[x1, x2, x3]
+from sklearn import decomposition
+pca = decomposition.PCA()
+pca.fit(X)
+print(pca.explained_variance_)
+# As we can see, only the 2 first components are useful
+pca.n_components = 2
+X_reduced = pca.fit_transform(X)
+print(X_reduced.shape)
+'''
+# Independent Component Analysis: ICA
+# Generate sample data
+'''
+import numpy as np
+from sklearn import decomposition
+time = np.linspace(0, 10, 2000)
+s1 = np.sin(2 * time) # Signal 1 : sinusoidal signal
+s2 = np.sign(np.sin(3 * time)) # Signal 2 : square signal
+S = np.c_[s1, s2]
+S += 0.2 * np.random.normal(size=S.shape) # Add noise
+S /= S.std(axis=0) # Standardize data
+A = np.array([[1, 1], [0.5, 2]]) # Mixing matrix
+X = np.dot(S, A.T) # Generate observations
+# Compute ICA
+ica = decomposition.FastICA()
+S_ = ica.fit_transform(X) # Get the estimated sources
+A_ = ica.mixing_.T
+print(np.allclose(X, np.dot(S_, A_) + ica.mean_))
+'''
+# 2.2.5 Putting it all together
+
+'''
+from sklearn import linear_model, decomposition, datasets
+from sklearn.pipeline import Pipeline
+from sklearn.model_selection import GridSearchCV
+logistic = linear_model.LogisticRegression()
+pca = decomposition.PCA()
+pipe = Pipeline(steps=[('pca', pca), ('logistic', logistic)])
+digits = datasets.load_digits()
+X_digits = digits.data
+y_digits = digits.target
+# Plot the PCA spectrum
+pca.fit(X_digits)
+plt.figure(1, figsize=(4, 3))
+plt.clf()
+plt.axes([.2, .2, .7, .7])
+plt.plot(pca.explained_variance_, linewidth=2)
+plt.axis('tight')
+plt.xlabel('n_components')
+plt.ylabel('explained_variance_')
+# Prediction
+n_components = [20, 40, 64]
+Cs = np.logspace(-4, 4, 3)
+# Parameters of pipelines can be set using ‘__’ separated parameter names:
+estimator = GridSearchCV(pipe,
+dict(pca__n_components=n_components,
+logistic__C=Cs))
+estimator.fit(X_digits, y_digits)
+plt.axvline(estimator.best_estimator_.named_steps['pca'].n_components,
+linestyle=':', label='n_components chosen')
+plt.legend(prop=dict(size=12))
+plt.savefig('pipeline_pca.pdf')
+plt.show()
+'''
+# 2.3 Working With Text Data
+# 2.3.2 Loading the 20 newsgroups dataset
+'''
+categories = ['alt.atheism', 'soc.religion.christian', 'comp.graphics', 'sci.med']
+from sklearn.datasets import fetch_20newsgroups
+twenty_train = fetch_20newsgroups(subset='train', categories=categories, shuffle=True, random_state=42)
+
+print(twenty_train.target_names)
+print(len(twenty_train.data))
+print("\n".join(twenty_train.data[0].split("\n")[:3]))
+
+for t in twenty_train.target[:10]:
+    print(twenty_train.target_names[t])
+
+'''
+# Tokenizing text with scikit-learn
+'''
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.datasets import fetch_20newsgroups
+categories = ['alt.atheism', 'soc.religion.christian', 'comp.graphics', 'sci.med']
+twenty_train = fetch_20newsgroups(subset='train', categories=categories, shuffle=True, random_state=42)
+count_vect = CountVectorizer()
+X_train_counts = count_vect.fit_transform(twenty_train.data)
+print(X_train_counts.shape)
+print(count_vect.vocabulary_.get(u'algorithm'))
+tfidf_transformer = TfidfTransformer()
+X_train_tfidf = tfidf_transformer.fit_transform(X_train_counts)
+
+# 2.3.4 Training a classifier
+from sklearn.naive_bayes import MultinomialNB
+clf = MultinomialNB().fit(X_train_tfidf, twenty_train.target)
+docs_new = ['God is love', 'OpenGL on the GPU is fast']
+X_new_counts = count_vect.transform(docs_new)
+X_new_tfidf = tfidf_transformer.transform(X_new_counts)
+predicted = clf.predict(X_new_tfidf)
+for doc, category in zip(docs_new, predicted):
+    print('%r => %s' % (doc, twenty_train.target_names[category]))
+'''
+# Machine learning for Neuro-Imaging in Python
+# http://nilearn.github.io/
+# https://github.com/astroML/sklearn_tutorial
+
+# 3.1 Supervised learning
+# 3.1.1 Generalized Linear Models
+# Ordinary Least Squares
+'''
+from sklearn import linear_model
+reg = linear_model.LinearRegression()
+reg.fit ([[0, 0], [1, 1], [2, 2]], [0, 1, 2])
+print(reg.coef_)
+'''
+"""
+However, coefficient estimates for Ordinary Least Squares rely on the independence of the model terms. When terms
+are correlated and the columns of the design matrix 𝑋 have an approximate linear dependence, the design matrix
+becomes close to singular and as a result, the least-squares estimate becomes highly sensitive to random errors in the
+observed response, producing a large variance. This situation of multicollinearity can arise, for example, when data
+are collected without an experimental design.
+"""
+# Ridge Regression
+'''
+from sklearn import linear_model
+reg = linear_model.Ridge (alpha = .5)
+reg.fit ([[0, 0], [0, 0], [1, 1]], [0, .1, 1])
+print(reg.coef_)
+print(reg.intercept_)
+'''
+# Setting the regularization parameter: generalized Cross-Validation
+'''
+from sklearn import linear_model
+reg = linear_model.RidgeCV(alphas=[0.1, 1.0, 10.0])
+reg.fit([[0, 0], [0, 0], [1, 1]], [0, .1, 1])
+print(reg.alpha_)
+'''
+# lasso
+'''
+from sklearn import linear_model
+reg = linear_model.Lasso(alpha = 0.1)
+reg.fit([[0, 0], [1, 1]], [0, 1])
+print(reg.predict([[1, 1]]))
+'''
+# Using cross-validation
+# LassoCV
+# Multi-task Lasso
+# LARS Lasso
+from sklearn import linear_model
+reg = linear_model.LassoLars(alpha=.1)
+reg.fit([[0, 0], [1, 1]], [0, 1])
+print(reg.coef_)
