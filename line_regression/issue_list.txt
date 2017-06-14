@@ -2,3 +2,15 @@
 	1. jupyter(ipynb) the path is what exactly it locate, 
 	2. So first check path, import os, os.path.abspath('')
 	3. Put file on path, os.path.abspath('')
+2.Excel 快速添加链接
+Public Sub 批量超链接() '将选定的单元格按它记录的地址创建超链接
+    
+    Dim rng As Range
+    
+    For Each rng In Selection
+        
+        ActiveSheet.Hyperlinks.Add rng, rng.Value
+    
+    Next
+
+End Sub

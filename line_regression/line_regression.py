@@ -6,6 +6,8 @@
 @file: line_regression1.py
 @time: 2017/6/12 21:52
 """
+# sklearn web online doc:http://scikit-learn.org/stable/user_guide.html
+# pandas onlie reference doc http://pandas.pydata.org/pandas-docs/stable
 # reference book:scikit-learn-docs.pdf
 # 2.1.1 machine learning:the problem setting
 # categories 
