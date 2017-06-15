@@ -62,7 +62,7 @@ ridgecv= fit_mode(RidgeCV(),alpha = alpha)
 lasso =fit_mode(Lasso(),alpha=0.1)
 lasso
 
-
+# 1.1.4. Multi-task Lasso
 
 
 
