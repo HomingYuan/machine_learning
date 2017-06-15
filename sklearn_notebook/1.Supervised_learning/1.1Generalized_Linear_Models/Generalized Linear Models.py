@@ -26,7 +26,7 @@ def fit_mode(regression_model,data_x_train=diabetes_X_train,
              data_x_test=diabetes_X_test,
              data_y_test=diabetes_y_test,
               alpha=None):
-    regr = regression_model()
+    regr = regression_model
     regr.fit(data_x_train,data_y_train)
     print('Coefficients:', regr.coef_)
     print('Fit score:',regr.score(data_x_test,data_y_test))
@@ -41,7 +41,7 @@ def fit_mode(regression_model,data_x_train=diabetes_X_train,
 
   # 1.1.1. Ordinary Least Squares
 '''
-line_regression = fit_mode(LinearRegression)   
+line_regression = fit_mode(LinearRegression())   
 line_regression
 '''
 
@@ -55,11 +55,11 @@ ridge
 # 1.1.2.2. Setting the regularization parameter: generalized Cross-Validation
 '''
 alpha = [0.1, 1.0, 10.0]
-ridgecv= fit_mode(RidgeCV,alpha = alpha)
+ridgecv= fit_mode(RidgeCV(),alpha = alpha)
 '''
 # 1.1.3. Lasso
 # The Lasso is a linear model that estimates sparse coefficients
-lasso =fit_mode(Lasso,alpha=0.1)
+lasso =fit_mode(Lasso(),alpha=0.1)
 lasso
 
 
