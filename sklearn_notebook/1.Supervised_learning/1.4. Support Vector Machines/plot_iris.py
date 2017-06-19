@@ -89,5 +89,5 @@ for i, clf in enumerate((svc, lin_svc, rbf_svc, poly_svc)):
     plt.xticks(())
     plt.yticks(())
     plt.title(titles[i])
-plt.savefig('svm.pdf')
+
 plt.show()
