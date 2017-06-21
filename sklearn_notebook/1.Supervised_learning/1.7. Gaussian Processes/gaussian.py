@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 """
 web:http://scikit-learn.org/stable/modules/gaussian_process.html
 Gaussian Processes (GP) are a generic supervised learning method designed to
