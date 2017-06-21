@@ -139,6 +139,17 @@ clf2 = clf2.fit(X,y)
 clf3 = clf3.fit(X,y)
 eclf = eclf.fit(X,y)
 """
+# 1.11.5.3. Using the VotingClassifier with GridSearch
+from sklearn.model_selection import GridSearchCV
+clf1 = LogisticRegression(random_state=1)
+clf2 = RandomForestClassifier(random_state=1)
+clf3 = GaussianNB()
+eclf = VotingClassifier(estimators=[('lr', clf1), ('rf', clf2), ('gnb', clf3)], voting='soft')
+
+params = {'lr__C': [1.0, 100.0], 'rf__n_estimators': [20, 200],}
+
+grid = GridSearchCV(estimator=eclf, param_grid=params, cv=5)
+grid = grid.fit(iris.data, iris.target)
 
 
 
