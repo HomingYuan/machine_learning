@@ -10,14 +10,8 @@ import math
 import numpy as np
 import random
 import matplotlib.pyplot as plt
-"""
-df=pd.read_excel("km.xlsx",sheetname="Sheet1")
-# l1=df['x1'].values.T
-l2=df['x2'].values.T
-random_num = np.random.choice(l2,4)
-print(random_num)
 
-"""
+
 def dist(num1,num2):
     t = (num1-num2)**2
     return float(t**0.5)
@@ -25,41 +19,81 @@ def dist(num1,num2):
 
 def mean_dist(dataSet):
     d ={}
+    """
+    t1 = np.percentile(a,10)
+    t2 = np.percentile(a, 30)
+    t3 = np.percentile(a, 50)
+    t4 = np.percentile(a, 90)
+    
+    """
     a = np.array(dataSet)
-    t1 = np.percentile(a,20)
-    t2 = np.percentile(a, 40)
-    t3 = np.percentile(a, 60)
-    t4 = np.percentile(a,80)
+
+    l = random.sample(dataSet, 4)
+    l.sort()
+    t1 = l[0]
+    t2 = l[1]
+    t3 = l[2]
+    t4 = l[3]
     d[t1] = []
     d[t2] = []
     d[t3] = []
     d[t4] = []
-    distances = []
+
+    sum = 0
    # print(t1,t2,t3,t4)
     for data in dataSet:
         m = []
         for t in [t1,t2,t3,t4]:
             m.append(dist(data,t))
-        # distances.append(min(m))
-        if dist(t1,data) == min(m):
-            d[t1].append(data)
-        if dist(t2,data) == min(m):
-            d[t2].append(data)
-        if dist(t3,data) == min(m):
-            d[t3].append(data)
-        if dist(t4,data) == min(m):
-            d[t4].append(data)
+
+        for ti in [t1,t2,t3,t4] :
+            if dist(ti,data) == min(m):
+                d[ti].append(data)
+                sum += dist(ti,data)
+
+    print('sum',sum)
+    print('first',[t1,t2,t3,t4])
+
+    t1 = np.array(d[t1]).mean()
+    t2 = np.array(d[t2]).mean()
+    t3 = np.array(d[t3]).mean()
+    t4 = np.array(d[t4]).mean()
+    d = {}
+    d[t1] = []
+    d[t2] = []
+    d[t3] = []
+    d[t4] = []
+
+    sum1 = 0
+    for data in dataSet:
+        m = []
+        for t in [t1,t2,t3,t4]:
+            m.append(dist(data,t))
+
+        for ti in [t1,t2,t3,t4] :
+            if dist(ti,data) == min(m):
+                d[ti].append(data)
+                sum1 += dist(ti,data)
+    # print([t1,t2,t3,t4])
+    print('sum1',sum1)
+    print('Second', [t1, t2, t3, t4])
     sorted(d.keys())
     return d.values()
 
-df = pd.read_excel('km.xlsx',sheetname='Sheet1')
-l2 = df['x2'].values.T
-# print(mean_dist(list(l2)))
-k = mean_dist(list(l2))
-m = list(k)
-l =[item for sublist in m for item in sublist]
-# print(l)
-t = pd.DataFrame(l)
-print(t)
-plt.scatter(range(len(t)),t)
-plt.show()
+
+def main():
+    df = pd.read_excel('km.xlsx',sheetname='Sheet1')
+    l2 = df['x2'].values.T
+    # print(mean_dist(list(l2)))
+    k = mean_dist(list(l2))
+    m = list(k)
+    l =[item for sublist in m for item in sublist]
+    # print(l)
+    t = pd.DataFrame(l)
+
+    plt.scatter(range(len(t)),t)
+    plt.show()
+
+if __name__ == '__main__':
+    main()
+
