@@ -20,6 +20,7 @@ def dist(num1, num2):
 def cenPoint(dataSet,k):
     oriPoint = random.sample(dataSet, k)
     oriPoint = sorted(oriPoint)
+    print('first',oriPoint)
     d = {}
     for i in range(k):
         d[oriPoint[i]] =[]
@@ -85,6 +86,8 @@ def cenPoint(dataSet,k):
             if dist(data,oriPoint[i]) == min(m):
                 d4[oriPoint[i]].append(data)
                 sum4 += min(m)
+    print('last',oriPoint)
+    print(sum4)
     return d4.values()
 
 
