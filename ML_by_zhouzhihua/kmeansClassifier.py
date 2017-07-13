@@ -27,20 +27,20 @@ def mean_dist(dataSet):
 
     """
     a = np.array(dataSet)
-
     l = random.sample(dataSet, 4)
     l.sort()
     t1 = l[0]
     t2 = l[1]
     t3 = l[2]
     t4 = l[3]
+
     d[t1] = []
     d[t2] = []
     d[t3] = []
     d[t4] = []
 
     sum = 0
-    # print(t1,t2,t3,t4)
+
     for data in dataSet:
         m = []
         for t in [t1, t2, t3, t4]:
@@ -51,47 +51,39 @@ def mean_dist(dataSet):
                 d[ti].append(data)
                 sum += dist(ti, data)
     sorted(d.keys())
+    print(t1,t2,t3,t4)
+    print(sum)
     return d
 
 def classifier(dataSet):
+
     valDict = mean_dist(dataSet)
-    key, val = valDict.items()
+    key = valDict.keys()
     d = {}
-    t1 = list(key)[0]
-    t2 = list(key)[1]
-    t3 = list(key)[2]
-    t4 = list(key)[3]
-
-    sum = 0
-    for data in dataSet:
-        m = []
-        for t in [t1, t2, t3, t4]:
-            m.append(dist(data, t))
-
-        for ti in [t1, t2, t3, t4]:
-            if dist(ti, data) == min(m):
-                d[ti].append(data)
-                sum += dist(ti, data)
-    sorted(d.keys())
-    return d
+    m1 = list(key)[0]
+    m2 = list(key)[1]
+    m3 = list(key)[2]
+    m4 = list(key)[3]
+    t1 = np.array(valDict[m1]).mean()
+    t2 = np.array(valDict[m2]).mean()
+    t3 = np.array(valDict[m3]).mean()
+    t4 = np.array(valDict[m4]).mean()
+    return mean_dist(dataSet)
 
 
-"""
+
 def main():
     df = pd.read_excel('km.xlsx', sheetname='Sheet1')
     l2 = df['x2'].values.T
-    # print(mean_dist(list(l2)))
-    k = mean_dist(list(l2))
-    m = list(k)
-    l = [item for sublist in m for item in sublist]
-    # print(l)
-    t = pd.DataFrame(l)
+    for i in range(50):
+        t = classifier(list(l2))
+        #print(t)
 
-    plt.scatter(range(len(t)), t)
-    plt.show()
+        k = t.values()
+        test = [item for sublist in k for item in sublist]
+        plt.scatter(range(len(test)),test)
+        plt.show()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
-    
-"""
