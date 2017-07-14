@@ -16,7 +16,7 @@ def dist(num1, num2):
     return float(t ** 0.5)
 
 
-def Kmean(dataSet, k,oriPoint):
+def Kmean(dataSet,k,oriPoint):
     d = {}
     for i in range(k):
         d[oriPoint[i]] = []
@@ -49,13 +49,14 @@ def test(dataSet,k,n): # k 分的种类，n 循环次数
 def main():
     df = pd.read_excel('km.xlsx', sheetname='Sheet1')
     l2 = df['x2'].values.T
-    data_list = test(list(l2), 5, 30)
+    data_list = test(list(l2), 4, 100)
     k = data_list[0]
     Data = [item for sublist in k for item in sublist]
     print(data_list[2])
     print(data_list[1])
     plt.scatter(range(len(Data)), Data)
     plt.show()
+
 
 if __name__ == "__main__":
     main()
