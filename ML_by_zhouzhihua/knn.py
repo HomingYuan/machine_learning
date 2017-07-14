@@ -34,12 +34,10 @@ def cenPoint(dataSet,k):
 
     for i in range(k):
         oriPoint[i] = np.array(d[oriPoint[i]]).mean()
-
     d1= {}
     sum1 =0
     for i in range(k):
         d1[oriPoint[i]] = []
-
     for i in range(k):
         for data in dataSet:
             m = [dist(oriPoint[i],data) for i in range(k)]
@@ -49,7 +47,6 @@ def cenPoint(dataSet,k):
 
     for i in range(k):
         oriPoint[i] = np.array(d1[oriPoint[i]]).mean()
-
     d2= {}
     sum2 = 0
     for i in range(k):
@@ -86,15 +83,29 @@ def cenPoint(dataSet,k):
             if dist(data,oriPoint[i]) == min(m):
                 d4[oriPoint[i]].append(data)
                 sum4 += min(m)
+
+    for i in range(k):
+        oriPoint[i] = np.array(d4[oriPoint[i]]).mean()
+    d5 = {}
+    sum5 = 0
+    for i in range(k):
+        d5[oriPoint[i]] = []
+    for i in range(k):
+        for data in dataSet:
+            m = [dist(oriPoint[i], data) for i in range(k)]
+            if dist(data, oriPoint[i]) == min(m):
+                d5[oriPoint[i]].append(data)
+                sum5 += min(m)
+
     print('last',oriPoint)
-    print(sum4)
-    return d4.values()
+    print(sum5)
+    return d5.values()
 
 
 def main():
     df = pd.read_excel('km.xlsx', sheetname='Sheet1')
     l2 = df['x2'].values.T
-    for i in range(2):
+    for i in range(10):
         k = cenPoint(list(l2),4)
         #print(t)
         test = [item for sublist in k for item in sublist]
@@ -104,3 +115,20 @@ def main():
 if __name__ == "__main__":
     main()
 
+def Kmean(dataSet,k):
+    d = {}
+    oriPoint = random.sample(dataSet, k)
+    oriPoint = sorted(oriPoint)
+    for i in range(k):
+        d[oriPoint[i]] =[]
+    sum = 0
+    for i in range(k):
+        for data in dataSet:
+            m = [dist(oriPoint[i],data) for i in range(k)]
+            if dist(data,oriPoint[i]) == min(m):
+                d[oriPoint[i]].append(data)
+                sum += min(m)
+
+    for i in range(k):
+        oriPoint[i] = np.array(d[oriPoint[i]]).mean()
+    yield oriPoint
