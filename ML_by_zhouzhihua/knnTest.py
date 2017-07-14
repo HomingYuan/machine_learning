@@ -31,21 +31,8 @@ def Kmean(dataSet, k,oriPoint):
     for i in range(k):
         oriPoint[i] = np.array(d[oriPoint[i]]).mean()
     return oriPoint,d.values(),sum
-"""
-def cenPoint(dataSet,k):
-    oriPoint = random.sample(dataSet, k)
-    oriPoint = sorted(oriPoint)
-    point = Kmean(dataSet,k,oriPoint)[0]
-    point1 = Kmean(dataSet,k,point)[0]
-    point2 = Kmean(dataSet,k,point1)[0]
-    point3 = Kmean(dataSet,k,point2)[0]
-    point4 = Kmean(dataSet, k, point3)[0]
-    point5 = Kmean(dataSet, k, point4)[0]
-    point6 = Kmean(dataSet, k, point5)[0]
-    point7 = Kmean(dataSet, k, point6)[0]
-    point8 = Kmean(dataSet, k, point7)[0]
-    return Kmean(dataSet,k,point8)[1]
-"""
+
+
 def test(dataSet,k,n): # k 分的种类，n 循环次数
     point = []
     for i in range(n):
@@ -69,7 +56,6 @@ def main():
     print(data_list[1])
     plt.scatter(range(len(Data)), Data)
     plt.show()
-
 
 if __name__ == "__main__":
     main()
