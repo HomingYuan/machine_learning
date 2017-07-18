@@ -82,12 +82,36 @@ df = pd.DataFrame({'A' : ['foo', 'bar', 'foo', 'bar',
 'B' : ['one', 'one', 'two', 'three',
 'two', 'two', 'one', 'three'],
 'C' : np.random.randn(8), 'D' : np.random.randn(8)})
-print(df)
-print(df.groupby('A').sum())
-print(df.groupby(['A','B']).sum())
-tuples = zip(*[['bar', 'bar', 'baz', 'baz'',
-’foo’, ’foo’, ’qux’, ’qux’],
-[’one’, ’two’, ’one’, ’two’,
-’one’, ’two’, ’one’, ’two’]])
-index = pd.MultiIndex.from_tuples(tuples, names=['first', 'second'])
-df = pd.DataFrame(np.random.randn(8, 2), index=index, columns=['A', 'B'])
+# print(df)
+# print(df.groupby('A').sum())
+# print(df.groupby(['A','B']).sum())
+
+df = pd.DataFrame({'A' : ['one', 'one', 'two', 'three'] * 3,
+'B' : ['A', 'B', 'C'] * 4,
+'C' : ['foo', 'foo', 'foo', 'bar', 'bar', 'bar'] * 2,
+'D' : np.random.randn(12),
+'E' : np.random.randn(12)})
+# print(df)
+# print(pd.pivot_table(df, values='D', index=['A', 'B'], columns=['C']))
+rng = pd.date_range('1/1/2012', periods=100, freq='S')
+# print(rng)
+ts = pd.Series(np.random.randint(0, 500, len(rng)), index=rng)
+# print(ts)
+# print(ts.resample('5Min').sum())
+rng1 = pd.date_range('3/6/2012 00:00', periods=5, freq='D')
+ts1 = pd.Series(np.random.randn(len(rng1)), rng1)
+ts_utc = ts.tz_localize('UTC')
+# print(ts_utc)
+ts = pd.Series(np.random.randn(1000), index=pd.date_range('1/1/2000', periods=1000))
+ts = ts.cumsum()
+# ts.plot()
+df.to_csv('foo.csv')
+t = pd.read_csv('foo.csv')
+# print(t)
+df.to_hdf('foo.h5','df')
+t1 = pd.read_hdf('foo.h5','df')
+# print(t1)
+df.to_excel('foo.xlsx', sheet_name='Sheet1')
+t2 = pd.read_excel('foo.xlsx', 'Sheet1', index_col=None, na_values=['NA'])
+print(t2)
+
