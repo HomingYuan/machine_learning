@@ -2,8 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from openpyxl import Workbook,load_workbook
-import pandas as pd
-from openpyxl.styles import Color, Fill
+import pandas as pdl
 import numpy as np
 from openpyxl.styles import Font, Color
 from openpyxl.styles import colors
