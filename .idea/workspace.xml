@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99b32d76-9c64-4da4-8f75-28994a975398" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ML_by_zhouzhihua/dajun_book.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ML_by_zhouzhihua/dajun_book/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ML_by_zhouzhihua/openpyxl_2d_drawing.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ML_by_zhouzhihua/openpyxl_e1.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ML_by_zhouzhihua/openpyxl_pandas.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ML_by_zhouzhihua/openpyxl_validation.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ML_by_zhouzhihua/pandas_10_mins.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ML_by_zhouzhihua/openpyxlTest.py" afterPath="$PROJECT_DIR$/ML_by_zhouzhihua/openpyxlTest.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ML_by_zhouzhihua/pandas_cookbook.py" afterPath="$PROJECT_DIR$/ML_by_zhouzhihua/pandas_cookbook.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,16 +18,16 @@
         <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/openpyxl_study.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="16" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="3" />
+              <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pandas_10_mins.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pandas_10_mins.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/pandas_10_mins.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
+            <state relative-caret-position="30">
               <caret line="89" column="2" lean-forward="false" selection-start-line="89" selection-start-column="2" selection-end-line="89" selection-end-column="2" />
               <folding>
                 <element signature="e#47#66#0" expanded="true" />
@@ -44,25 +36,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dajun_book.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/dajun_book.py">
+      <file leaf-file-name="pandas_cookbook.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/pandas_cookbook.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+            <state relative-caret-position="273">
+              <caret line="131" column="16" lean-forward="true" selection-start-line="131" selection-start-column="16" selection-end-line="131" selection-end-column="16" />
               <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="house_price_lianjia.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Data analyst/data_science_way/python/house_price_lianjia.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="8" />
-              <folding>
-                <element signature="e#121#142#0" expanded="true" />
+                <element signature="e#156#175#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -111,6 +91,7 @@
         <option value="$PROJECT_DIR$/ML_by_zhouzhihua/openpyxl_2d_drawing.py" />
         <option value="$PROJECT_DIR$/ML_by_zhouzhihua/dajun_book.py" />
         <option value="$PROJECT_DIR$/ML_by_zhouzhihua/pandas_10_mins.py" />
+        <option value="$PROJECT_DIR$/ML_by_zhouzhihua/pandas_cookbook.py" />
       </list>
     </option>
   </component>
@@ -151,25 +132,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.pandas_10_mins">
-    <configuration default="false" name="openpyxl_e1" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ML_by_zhouzhihua" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="machine_learning" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ML_by_zhouzhihua/openpyxl_e1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.pandas_cookbook">
     <configuration default="false" name="openpyxl_validation" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -242,6 +205,24 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
+    <configuration default="false" name="pandas_cookbook" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ML_by_zhouzhihua" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="machine_learning" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ML_by_zhouzhihua/pandas_cookbook.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -308,19 +289,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.openpyxl_e1" />
-      <item index="1" class="java.lang.String" itemvalue="Python.openpyxl_validation" />
-      <item index="2" class="java.lang.String" itemvalue="Python.openpyxl_pandas" />
-      <item index="3" class="java.lang.String" itemvalue="Python.pandas_10_mins" />
-      <item index="4" class="java.lang.String" itemvalue="Python.dajun_book" />
+      <item index="0" class="java.lang.String" itemvalue="Python.openpyxl_validation" />
+      <item index="1" class="java.lang.String" itemvalue="Python.openpyxl_pandas" />
+      <item index="2" class="java.lang.String" itemvalue="Python.pandas_10_mins" />
+      <item index="3" class="java.lang.String" itemvalue="Python.dajun_book" />
+      <item index="4" class="java.lang.String" itemvalue="Python.pandas_cookbook" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.pandas_10_mins" />
-        <item index="1" class="java.lang.String" itemvalue="Python.dajun_book" />
-        <item index="2" class="java.lang.String" itemvalue="Python.openpyxl_pandas" />
-        <item index="3" class="java.lang.String" itemvalue="Python.openpyxl_validation" />
-        <item index="4" class="java.lang.String" itemvalue="Python.openpyxl_e1" />
+        <item index="0" class="java.lang.String" itemvalue="Python.pandas_cookbook" />
+        <item index="1" class="java.lang.String" itemvalue="Python.pandas_10_mins" />
+        <item index="2" class="java.lang.String" itemvalue="Python.dajun_book" />
+        <item index="3" class="java.lang.String" itemvalue="Python.openpyxl_pandas" />
+        <item index="4" class="java.lang.String" itemvalue="Python.openpyxl_validation" />
       </list>
     </recent_temporary>
   </component>
@@ -338,18 +319,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33224756" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33224756" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -370,25 +351,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Data analyst/data_science_way/python/quandl_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/kmeansTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/kmeansTest.py" />
     <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/kmeans.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -396,9 +363,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2430">
           <caret line="81" column="17" lean-forward="true" selection-start-line="74" selection-start-column="1" selection-end-line="88" selection-end-column="10" />
-          <folding>
-            <element signature="e#84#103#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -413,7 +377,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -421,19 +384,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2400">
           <caret line="80" column="53" lean-forward="true" selection-start-line="80" selection-start-column="53" selection-end-line="80" selection-end-column="53" />
-          <folding>
-            <element signature="e#84#103#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/kmeansTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="27" column="16" lean-forward="false" selection-start-line="27" selection-start-column="2" selection-end-line="32" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/kmeansTest.py" />
     <entry file="file://$PROJECT_DIR$/line_regression/line_regression.py" />
     <entry file="file://D:/Big_data/大数据学习/data_science_way/python/51job_analyse.py" />
     <entry file="file://D:/Big_data/python/mail_test.py" />
@@ -485,13 +439,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/kmeansTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="63" column="8" lean-forward="true" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/kmeansTest.py" />
     <entry file="file://$PROJECT_DIR$/../Data analyst/data_science_way/python/get_html.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
@@ -510,9 +458,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-          <folding>
-            <element signature="e#84#103#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -520,7 +465,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2547">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -528,9 +472,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="93">
           <caret line="55" column="23" lean-forward="false" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
-          <folding>
-            <element signature="e#84#103#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -538,7 +479,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -546,9 +486,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
           <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="e#47#76#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -556,9 +493,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="23" />
-          <folding>
-            <element signature="e#47#76#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -566,9 +500,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="29" />
-          <folding>
-            <element signature="e#47#76#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -576,9 +507,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="7" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="23" />
-          <folding>
-            <element signature="e#47#76#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -586,46 +514,53 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
           <caret line="24" column="47" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="49" />
-          <folding>
-            <element signature="e#47#90#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/openpyxl_study.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="16" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="3" />
+          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Data analyst/data_science_way/python/house_price_lianjia.py">
+    <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/pandas_10_mins.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="8" />
+        <state relative-caret-position="30">
+          <caret line="89" column="2" lean-forward="false" selection-start-line="89" selection-start-column="2" selection-end-line="89" selection-end-column="2" />
           <folding>
-            <element signature="e#121#142#0" expanded="true" />
+            <element signature="e#47#66#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/dajun_book.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        <state relative-caret-position="360">
+          <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/pandas_10_mins.py">
+    <entry file="file://$PROJECT_DIR$/../Data analyst/data_science_way/python/house_price_lianjia.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="25" column="7" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="8" />
+          <folding>
+            <element signature="e#121#142#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/pandas_cookbook.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
-          <caret line="89" column="2" lean-forward="false" selection-start-line="89" selection-start-column="2" selection-end-line="89" selection-end-column="2" />
+          <caret line="131" column="16" lean-forward="true" selection-start-line="131" selection-start-column="16" selection-end-line="131" selection-end-column="16" />
           <folding>
-            <element signature="e#47#66#0" expanded="true" />
+            <element signature="e#156#175#0" expanded="true" />
           </folding>
         </state>
       </provider>
