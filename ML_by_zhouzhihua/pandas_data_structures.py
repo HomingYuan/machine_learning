@@ -122,7 +122,32 @@ data = {'Item1' : pd.DataFrame(np.random.randn(4, 3)),
 df = pd.DataFrame({'a': ['foo', 'bar', 'baz'], 'b': np.random.randn(3)})
 data = {'item1': df, 'item2': df}
 panel = pd.Panel.from_dict(data, orient='minor')
-print(panel['a'])
-print(panel['b'])
+# print(panel['a'])
+# print(panel['b'])
 # print(panel['item1']) # 会报错
 # 8.3.3 From DataFrame using to_panel method
+midx = pd.MultiIndex(levels=[['one', 'two'], ['x','y']], labels=[[1,1,0,0],[1,0,1,0]])
+df = pd.DataFrame({'A' : [1, 2, 3, 4], 'B': [5, 6, 7, 8]}, index=midx)
+# print(df.to_panel())
+# 8.3.4 Item selection / addition / deletion
+# print(wp['Item1'])
+# 8.3.5 Transposing
+# print(wp.transpose(2, 0, 1))
+# 8.3.6 Indexing / Selection
+"""
+print(wp['Item1'])
+print(wp.major_xs(wp.major_axis[2]))
+print(wp.minor_axis)
+print(wp.minor_xs('C'))
+"""
+# 8.3.7 Squeezing
+"""
+print(wp.reindex(items=['Item1']).squeeze()) # same as wp['Item1']
+print(wp['Item1'])
+"""
+# 8.3.8 Conversion to DataFrame
+panel = pd.Panel(np.random.randn(3, 5, 4), items=['one', 'two', 'three'],
+ major_axis=pd.date_range('1/1/2000', periods=5),
+minor_axis=['a', 'b', 'c', 'd'])
+# print(panel.to_frame())
+
