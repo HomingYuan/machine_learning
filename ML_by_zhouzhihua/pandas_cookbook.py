@@ -9,6 +9,7 @@
 import pandas as pd
 import numpy as np
 import itertools
+import functools
 # 7.1 Idioms
 df = pd.DataFrame({'AAA' : [4,5,6,7], 'BBB' : [10,20,30,40],'CCC' : [100,50,-30,-50]})
 # print(df)
@@ -132,4 +133,65 @@ def replace(g):
     mask = g < 0
     g.loc[mask] = g[~mask].mean()
     return g
-print(gb.transform(replace))
+# print(gb.transform(replace))
+# 7.5 Grouping
+df = pd.DataFrame({'animal': 'cat dog cat fish dog cat cat'.split(),
+'size': list('SSMMMLL'),
+'weight': [8, 10, 11, 1, 20, 12, 12],
+'adult' : [False] * 5 + [True] * 2})
+"""
+# print(df)
+print(df.groupby('animal').apply(lambda subf: subf['size'][subf['weight'].idxmax()]))
+print(df.groupby('animal').apply(lambda subf: subf['size'][subf['weight'].idxmin()]))
+"""
+gb = df.groupby(['animal'])
+# print(gb.get_group('dog'))
+# 通过groupby获得column下面的items，然后通过get_group（item）获得具体的item
+
+def GrowUp(x):
+    avg_weight = sum(x[x['size'] == 'S'].weight * 1.5)
+    avg_weight += sum(x[x['size'] == 'M'].weight * 1.25)
+    avg_weight += sum(x[x['size'] == 'L'].weight)
+    avg_weight /= len(x)
+    return pd.Series(['L',avg_weight,True], index=['size', 'weight', 'adult'])
+
+expected_df = gb.apply(GrowUp)
+# print(expected_df)
+S = pd.Series([i / 100.0 for i in range(1,11)])
+def CumRet(x,y):
+     return x * (1 + y)
+def Red(x):
+    return functools.reduce(CumRet, x, 1.0)
+"""
+print(S)
+print(S.expanding().apply(Red))
+"""
+df = pd.DataFrame({'A' : [1, 1, 2, 2], 'B' : [1, -1, 1, 2]})
+gb = df.groupby('A')
+#print(df)
+def replace(g):
+     mask = g < 0
+     g.loc[mask] = g[~mask].mean()
+     return g
+# print(gb.transform(replace))
+df = pd.DataFrame({'code': ['foo', 'bar', 'baz'] * 2,
+ 'data': [0.16, -0.21, 0.33, 0.45, -0.59, 0.62],
+ 'flag': [False, True] * 3})
+code_groups = df.groupby('code')
+agg_n_sort_order = code_groups[['data']].transform(sum).sort_values(by='data')
+sorted_df = df.loc[agg_n_sort_order.index]
+# print(sorted_df)
+rng = pd.date_range(start="2014-10-07",periods=10,freq='2min')
+ts = pd.Series(data = list(range(10)), index = rng)
+def MyCust(x):
+     if len(x) > 2:
+         return x[1] * 1.234
+     return pd.NaT
+
+mhc = {'Mean' : np.mean, 'Max' : np.max, 'Custom' : MyCust}
+# print(ts.resample("5min").apply(mhc))
+# print(ts)
+df = pd.DataFrame({'Color': 'Red Red Red Blue'.split(), 'Value': [100, 150, 50, 50]})
+print(df)
+df['Counts'] = df.groupby(['Color']).transform(len)
+print(df)
