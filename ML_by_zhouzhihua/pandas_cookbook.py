@@ -10,6 +10,9 @@ import pandas as pd
 import numpy as np
 import itertools
 import functools
+import datetime
+
+
 # 7.1 Idioms
 df = pd.DataFrame({'AAA' : [4,5,6,7], 'BBB' : [10,20,30,40],'CCC' : [100,50,-30,-50]})
 # print(df)
@@ -264,7 +267,34 @@ print(df)
 """
 df = pd.DataFrame(data={'Area' : ['A'] * 5 + ['C'] * 2,
  'Bins' : [110] * 2 + [160] * 3 + [40] * 2, 'Test_0' : [0, 1, 0, 1, 2, 0, 1],'Data' : np.random.randn(7)})
-print(df)
+# print(df)
 df['Test_1'] = df['Test_0'] - 1
-print(df)
+# print(df)
+# print(pd.merge(df, df, left_on=['Bins', 'Area','Test_0'], right_on=['Bins', 'Area','Test_1'],suffixes=('_L','_R')))
+s = pd.Series(pd.date_range('2012-1-1', periods=3, freq='D'))
+# print(s - s.max())
+# print(s - s.min())
+# print(s - datetime.datetime(2011,1,1,3,5))
+# print(s + datetime.timedelta(minutes=5))
+deltas = pd.Series([ datetime.timedelta(days=i) for i in range(3) ])
+df = pd.DataFrame(dict(A = s, B = deltas))
+# print(df)
+df['New Dates'] = df['A'] + df['B']
+df['Delta'] = df['A'] - df['New Dates']
+# print(df)
+y = s - s.shift()
+# print(y)
+# print(s.shift(-1))
+y[1] = np.nan
+# print(y)
+# 7.12 Aliasing Axis Names
+# 7.13 Creating Example Data
+def expand_grid(data_dict):
+     rows = itertools.product(*data_dict.values())
+     return pd.DataFrame.from_records(rows, columns=data_dict.keys())
 
+df = expand_grid(
+ {'height': [60, 70],
+ 'weight': [100, 140, 180],
+ 'sex': ['Male', 'Female']})
+print(df)

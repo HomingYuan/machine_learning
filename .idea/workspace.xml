@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99b32d76-9c64-4da4-8f75-28994a975398" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ML_by_zhouzhihua/pandas_data_structures.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ML_by_zhouzhihua/pandas_cookbook.py" afterPath="$PROJECT_DIR$/ML_by_zhouzhihua/pandas_cookbook.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,13 +38,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pandas_cookbook.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pandas_cookbook.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/pandas_cookbook.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="268" column="8" lean-forward="false" selection-start-line="268" selection-start-column="8" selection-end-line="268" selection-end-column="8" />
+            <state relative-caret-position="0">
+              <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="23" />
               <folding>
                 <element signature="e#156#175#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pandas_data_structures.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/pandas_data_structures.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="64" column="54" lean-forward="false" selection-start-line="64" selection-start-column="54" selection-end-line="64" selection-end-column="54" />
+              <folding>
+                <element signature="e#47#66#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -92,6 +106,7 @@
         <option value="$PROJECT_DIR$/ML_by_zhouzhihua/dajun_book.py" />
         <option value="$PROJECT_DIR$/ML_by_zhouzhihua/pandas_10_mins.py" />
         <option value="$PROJECT_DIR$/ML_by_zhouzhihua/pandas_cookbook.py" />
+        <option value="$PROJECT_DIR$/ML_by_zhouzhihua/pandas_data_structures.py" />
       </list>
     </option>
   </component>
@@ -132,25 +147,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.pandas_cookbook">
-    <configuration default="false" name="openpyxl_validation" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ML_by_zhouzhihua" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="machine_learning" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ML_by_zhouzhihua/openpyxl_validation.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.pandas_data_structures">
     <configuration default="false" name="openpyxl_pandas" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -223,6 +220,24 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
+    <configuration default="false" name="pandas_data_structures" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ML_by_zhouzhihua" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="machine_learning" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ML_by_zhouzhihua/pandas_data_structures.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -289,19 +304,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.openpyxl_validation" />
-      <item index="1" class="java.lang.String" itemvalue="Python.openpyxl_pandas" />
-      <item index="2" class="java.lang.String" itemvalue="Python.pandas_10_mins" />
-      <item index="3" class="java.lang.String" itemvalue="Python.dajun_book" />
-      <item index="4" class="java.lang.String" itemvalue="Python.pandas_cookbook" />
+      <item index="0" class="java.lang.String" itemvalue="Python.openpyxl_pandas" />
+      <item index="1" class="java.lang.String" itemvalue="Python.pandas_10_mins" />
+      <item index="2" class="java.lang.String" itemvalue="Python.dajun_book" />
+      <item index="3" class="java.lang.String" itemvalue="Python.pandas_cookbook" />
+      <item index="4" class="java.lang.String" itemvalue="Python.pandas_data_structures" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.pandas_cookbook" />
-        <item index="1" class="java.lang.String" itemvalue="Python.pandas_10_mins" />
-        <item index="2" class="java.lang.String" itemvalue="Python.dajun_book" />
-        <item index="3" class="java.lang.String" itemvalue="Python.openpyxl_pandas" />
-        <item index="4" class="java.lang.String" itemvalue="Python.openpyxl_validation" />
+        <item index="0" class="java.lang.String" itemvalue="Python.pandas_data_structures" />
+        <item index="1" class="java.lang.String" itemvalue="Python.pandas_cookbook" />
+        <item index="2" class="java.lang.String" itemvalue="Python.pandas_10_mins" />
+        <item index="3" class="java.lang.String" itemvalue="Python.dajun_book" />
+        <item index="4" class="java.lang.String" itemvalue="Python.openpyxl_pandas" />
       </list>
     </recent_temporary>
   </component>
@@ -320,13 +335,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33224756" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33224756" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -351,7 +367,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/kmeansTest.py" />
     <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/kmeans.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -551,10 +566,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/pandas_cookbook.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="268" column="8" lean-forward="false" selection-start-line="268" selection-start-column="8" selection-end-line="268" selection-end-column="8" />
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="23" />
           <folding>
             <element signature="e#156#175#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/pandas_data_structures.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="64" column="54" lean-forward="false" selection-start-line="64" selection-start-column="54" selection-end-line="64" selection-end-column="54" />
+          <folding>
+            <element signature="e#47#66#0" expanded="true" />
           </folding>
         </state>
       </provider>
