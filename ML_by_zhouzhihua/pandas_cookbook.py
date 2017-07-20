@@ -192,6 +192,79 @@ mhc = {'Mean' : np.mean, 'Max' : np.max, 'Custom' : MyCust}
 # print(ts.resample("5min").apply(mhc))
 # print(ts)
 df = pd.DataFrame({'Color': 'Red Red Red Blue'.split(), 'Value': [100, 150, 50, 50]})
-print(df)
+# print(df)
 df['Counts'] = df.groupby(['Color']).transform(len)
+#print(df)
+df = pd.DataFrame(
+ {u'line_race': [10, 10, 8, 10, 10, 8],
+ u'beyer': [99, 102, 103, 103, 88, 100]},
+ index=['Last Gunfighter', 'Last Gunfighter', 'Last Gunfighter',
+ 'Paynter', 'Paynter', 'Paynter'])
+# print(df)
+df['beyer_shifted'] = df.groupby(level=0)['beyer'].shift(1)
+# print(df)
+df = pd.DataFrame({'host':['other','other','that','this','this'],
+ 'service':['mail','web','mail','mail','web'], 'no':[1, 2, 1, 2, 1]}).set_index(['host', 'service'])
+mask = df.groupby(level=0).agg('idxmax')
+df_count = df.loc[mask['no']].reset_index()
+# print(df_count)
+df = pd.DataFrame([0, 1, 0, 1, 1, 1, 0, 1, 1], columns=['A'])
+# print(df.A.groupby((df.A != df.A.shift()).cumsum()).groups)
+# 7.5.1 Expanding Data
+# 7.5.2 Splitting
+df = pd.DataFrame(data={'Case' : ['A','A','A','B','A','A','B','A','A'], 'Data' : np.random.randn(9)})
+#print(df)
+dfs = list(zip(*df.groupby((1*(df['Case']=='B')).cumsum().rolling(window=3,min_periods=1).median())))[-1]
+# print(dfs[0])
+# 7.5.3 Pivot
+df = pd.DataFrame(data={'Province' : ['ON','QC','BC','AL','AL','MN','ON'],
+ 'City' : ['Toronto','Montreal','Vancouver','Calgary','Edmonton','Winnipeg','Windsor'], 'Sales' : [13,6,16,8,4,3,1]})
+# print(df)
+table = pd.pivot_table(df,values=['Sales'],index=['Province'],columns=['City'],aggfunc=np.sum,margins=True)
+# print(table.stack('City'))
+df = pd.DataFrame({'value': np.random.randn(36)}, index=pd.date_range('2011-01-01', freq='M', periods=36))
+# print(pd.pivot_table(df, index=df.index.month, columns=df.index.year, values='value', aggfunc='sum'))
+# 7.5.4 Apply
+df = pd.DataFrame(data=np.random.randn(2000,2)/10000,
+ index=pd.date_range('2011-01-01',periods=2000),
+ columns=['A','B'])
+# print(df)
+def gm(aDF,Const):
+    v = ((((aDF.A+aDF.B)+1).cumprod())-1)*Const
+    return (aDF.index[0],v.iloc[-1])
+S = pd.Series(dict([ gm(df.iloc[i:min(i+51,len(df)-1)],5) for i in range(len(df)-50) ]))
+# print(S)
+rng = pd.date_range(start = '2014-01-01',periods = 100)
+df = pd.DataFrame({'Open' : np.random.randn(len(rng)),
+ 'Close' : np.random.randn(len(rng)),
+ 'Volume' : np.random.randint(100,2000,len(rng))},
+index=rng)
+# print(df)
+def vwap(bars): return ((bars.Close*bars.Volume).sum()/bars.Volume.sum())
+window = 5
+s = pd.concat([ (pd.Series(vwap(df.iloc[i:i+window]), index=[df.
+index[i+window]])) for i in range(len(df)-window) ])
+# print(s.round(2))
+# 7.6 Timeseries
+dates = pd.date_range('2000-01-01', periods=5)
+# print(dates)
+"""
+print(dates.to_period(freq='D').to_timestamp())
+print(dates.to_period(freq='M').to_timestamp())
+"""
+# 7.6.1 Resampling
+
+rng = pd.date_range('2000-01-01', periods=6)
+df1 = pd.DataFrame(np.random.randn(6, 3), index=rng, columns=['A', 'B', 'C'])
+df2 = df1.copy()
+df = df1.append(df2,ignore_index=False)
+"""
+print(df1)
 print(df)
+"""
+df = pd.DataFrame(data={'Area' : ['A'] * 5 + ['C'] * 2,
+ 'Bins' : [110] * 2 + [160] * 3 + [40] * 2, 'Test_0' : [0, 1, 0, 1, 2, 0, 1],'Data' : np.random.randn(7)})
+print(df)
+df['Test_1'] = df['Test_0'] - 1
+print(df)
+
