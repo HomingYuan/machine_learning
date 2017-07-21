@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99b32d76-9c64-4da4-8f75-28994a975398" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ML_by_zhouzhihua/pandas_data_structures.py" afterPath="$PROJECT_DIR$/ML_by_zhouzhihua/pandas_data_structures.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ML_by_zhouzhihua/pandas_basic_function.py" afterPath="$PROJECT_DIR$/ML_by_zhouzhihua/pandas_basic_function.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,14 +49,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pandas_data_structures.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pandas_data_structures.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/pandas_data_structures.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="127" column="44" lean-forward="false" selection-start-line="127" selection-start-column="44" selection-end-line="127" selection-end-column="44" />
+            <state relative-caret-position="1083">
+              <caret line="152" column="0" lean-forward="false" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
               <folding>
                 <element signature="e#47#66#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pandas_basic_function.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/pandas_basic_function.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="244">
+              <caret line="200" column="0" lean-forward="true" selection-start-line="200" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -105,6 +116,7 @@
         <option value="$PROJECT_DIR$/ML_by_zhouzhihua/pandas_10_mins.py" />
         <option value="$PROJECT_DIR$/ML_by_zhouzhihua/pandas_cookbook.py" />
         <option value="$PROJECT_DIR$/ML_by_zhouzhihua/pandas_data_structures.py" />
+        <option value="$PROJECT_DIR$/ML_by_zhouzhihua/pandas_basic_function.py" />
       </list>
     </option>
   </component>
@@ -145,25 +157,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.pandas_data_structures">
-    <configuration default="false" name="openpyxl_pandas" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ML_by_zhouzhihua" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="machine_learning" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ML_by_zhouzhihua/openpyxl_pandas.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.pandas_basic_function">
     <configuration default="false" name="pandas_10_mins" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -236,6 +230,24 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
+    <configuration default="false" name="pandas_basic_function" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ML_by_zhouzhihua" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="machine_learning" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ML_by_zhouzhihua/pandas_basic_function.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -302,19 +314,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.openpyxl_pandas" />
-      <item index="1" class="java.lang.String" itemvalue="Python.pandas_10_mins" />
-      <item index="2" class="java.lang.String" itemvalue="Python.dajun_book" />
-      <item index="3" class="java.lang.String" itemvalue="Python.pandas_cookbook" />
-      <item index="4" class="java.lang.String" itemvalue="Python.pandas_data_structures" />
+      <item index="0" class="java.lang.String" itemvalue="Python.pandas_10_mins" />
+      <item index="1" class="java.lang.String" itemvalue="Python.dajun_book" />
+      <item index="2" class="java.lang.String" itemvalue="Python.pandas_cookbook" />
+      <item index="3" class="java.lang.String" itemvalue="Python.pandas_data_structures" />
+      <item index="4" class="java.lang.String" itemvalue="Python.pandas_basic_function" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.pandas_data_structures" />
-        <item index="1" class="java.lang.String" itemvalue="Python.pandas_cookbook" />
-        <item index="2" class="java.lang.String" itemvalue="Python.pandas_10_mins" />
-        <item index="3" class="java.lang.String" itemvalue="Python.dajun_book" />
-        <item index="4" class="java.lang.String" itemvalue="Python.openpyxl_pandas" />
+        <item index="0" class="java.lang.String" itemvalue="Python.pandas_basic_function" />
+        <item index="1" class="java.lang.String" itemvalue="Python.pandas_data_structures" />
+        <item index="2" class="java.lang.String" itemvalue="Python.pandas_cookbook" />
+        <item index="3" class="java.lang.String" itemvalue="Python.pandas_10_mins" />
+        <item index="4" class="java.lang.String" itemvalue="Python.dajun_book" />
       </list>
     </recent_temporary>
   </component>
@@ -365,13 +377,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/kmeans.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/kmeansClassifier.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2430">
@@ -574,11 +579,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/pandas_data_structures.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="127" column="44" lean-forward="false" selection-start-line="127" selection-start-column="44" selection-end-line="127" selection-end-column="44" />
+        <state relative-caret-position="1083">
+          <caret line="152" column="0" lean-forward="false" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
           <folding>
             <element signature="e#47#66#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/pandas_basic_function.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="200" column="0" lean-forward="true" selection-start-line="200" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
