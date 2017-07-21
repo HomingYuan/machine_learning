@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99b32d76-9c64-4da4-8f75-28994a975398" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ML_by_zhouzhihua/pandas_work_with_text_data.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ML_by_zhouzhihua/pandas_basic_function.py" afterPath="$PROJECT_DIR$/ML_by_zhouzhihua/pandas_basic_function.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,11 +61,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pandas_basic_function.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pandas_basic_function.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/pandas_basic_function.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="200" column="0" lean-forward="true" selection-start-line="200" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
+            <state relative-caret-position="64">
+              <caret line="251" column="49" lean-forward="true" selection-start-line="251" selection-start-column="49" selection-end-line="251" selection-end-column="49" />
+              <folding>
+                <element signature="e#163#182#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pandas_work_with_text_data.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/pandas_work_with_text_data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -117,6 +129,7 @@
         <option value="$PROJECT_DIR$/ML_by_zhouzhihua/pandas_cookbook.py" />
         <option value="$PROJECT_DIR$/ML_by_zhouzhihua/pandas_data_structures.py" />
         <option value="$PROJECT_DIR$/ML_by_zhouzhihua/pandas_basic_function.py" />
+        <option value="$PROJECT_DIR$/ML_by_zhouzhihua/pandas_work_with_text_data.py" />
       </list>
     </option>
   </component>
@@ -344,7 +357,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -377,13 +390,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/kmeansClassifier.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2430">
-          <caret line="81" column="17" lean-forward="true" selection-start-line="74" selection-start-column="1" selection-end-line="88" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/knn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
@@ -589,8 +595,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/pandas_basic_function.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="200" column="0" lean-forward="true" selection-start-line="200" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
+        <state relative-caret-position="64">
+          <caret line="251" column="49" lean-forward="true" selection-start-line="251" selection-start-column="49" selection-end-line="251" selection-end-column="49" />
+          <folding>
+            <element signature="e#163#182#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ML_by_zhouzhihua/pandas_work_with_text_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

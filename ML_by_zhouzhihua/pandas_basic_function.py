@@ -9,6 +9,7 @@
 
 import pandas as pd
 import numpy as np
+import datetime
 
 
 index = pd.date_range('1/1/2000', periods=8)
@@ -179,10 +180,10 @@ print(tsdf.apply(lambda x: x.idxmax()))
 tsdf = pd.DataFrame(np.random.randn(10, 3), columns=['A', 'B', 'C'],index=pd.date_range('1/1/2000', periods=10))
 tsdf.iloc[3:7] = np.nan
 # print(tsdf)
-print(tsdf.apply(np.sum))
+# print(tsdf.apply(np.sum))
 # 9.10 Vectorized string methods
 s = pd.Series(['A', 'B', 'C', 'Aaba', 'Baca', np.nan, 'CABA', 'dog', 'cat'])
-print(s.str.lower())
+# print(s.str.lower())
 # 9.11 Sorting
 unsorted_df = df.reindex(index=['a', 'd', 'c', 'b'], columns=['three', 'two', 'one']) # reindex 修改index
 """
@@ -198,3 +199,59 @@ df1 = pd.DataFrame({'one':[2,1,1,1],'two':[1,3,2,4],'three':[5,4,3,2]})
 # print(df1.sort_values(by='two'))
 # print(df1[['one', 'two', 'three']].sort_values(by=['one','two']))
 s[2] = np.nan
+# print(s.sort_values())
+# 9.11.3 searchsorted
+ser = pd.Series([1, 2, 3])
+"""
+print(ser.searchsorted([0, 3]))
+print(ser.searchsorted([0, 4]))
+print(ser.searchsorted([1, 3], side='right'))
+print(ser.searchsorted([1, 3], side='left'))
+"""
+# 9.11.4 smallest / largest values
+s = pd.Series(np.random.permutation(10))
+"""
+print(s)
+print(s.sort_values())
+print(s.nsmallest(3))
+print(s.nlargest(3))
+"""
+df = pd.DataFrame({'a': [-2, -1, 1, 10, 8, 11, -1],
+ 'b': list('abdceff'),
+ 'c': [1.0, 2.0, 4.0, 3.2, np.nan, 3.0, 4.0]})
+# print(df.nlargest(3, 'a'))
+# print(df.nlargest(5, ['a', 'c']))
+# print(df.nsmallest(3, 'a'))
+# 9.13 dtypes
+dft = pd.DataFrame(dict(A = np.random.rand(3),
+ B = 1,
+ C = 'foo',
+ D = pd.Timestamp('20010102'),
+ E = pd.Series([1.0]*3).astype('float32'),
+ F = False,
+ G = pd.Series([1]*3,dtype='int8')))
+# print(dft.dtypes)
+# 9.13.4 object conversion
+m = ['1.1', 2, 3]
+# print(pd.to_numeric(m))
+m = ['2016-07-09', datetime.datetime(2016, 3, 2)]
+# print(pd.to_datetime(m))
+m = ['5us', pd.Timedelta('1day')]
+# print(pd.to_timedelta(m))
+m = ['apple', datetime.datetime(2016, 3, 2)]
+# print(pd.to_datetime(m, errors='coerce'))
+m = ['apple', 2, 3]
+# print(pd.to_numeric(m, errors='coerce'))
+m = ['apple', datetime.datetime(2016, 3, 2)]
+# print(pd.to_datetime(m, errors='ignore'))
+m = ['apple', 2, 3]
+# print(pd.to_numeric(m, errors='ignore'))
+df = pd.DataFrame([['2016-07-09', datetime.datetime(2016, 3, 2)]] * 2,dtype='O')
+# print(df)
+# print(df.apply(pd.to_datetime))
+df = pd.DataFrame([['1.1', 2, 3]] * 2, dtype='O')
+# print(df)
+# print(df.apply(pd.to_numeric))
+df = pd.DataFrame([['5us', pd.Timedelta('1day')]] * 2, dtype='O')
+print(df.apply(pd.to_timedelta))
+# 9.13.5 gotchas
