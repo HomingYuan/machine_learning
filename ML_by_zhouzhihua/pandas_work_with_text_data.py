@@ -61,3 +61,7 @@ pattern = r'[0-9][a-z]'
 # print(pd.Series(['1', '2', '3a', '3b', '03c']).str.contains(pattern))
 # print(pd.Series(['1', '2', '3a', '3b', '03c']).str.match(pattern))
 # 10.5 Creating Indicator Variables
+s = pd.Series(['a', 'a|b', np.nan, 'a|c'])
+# print(s.str.get_dummies(sep='|'))
+idx = pd.Index(['a', 'a|b', np.nan, 'a|c'])
+print(idx.str.get_dummies(sep='|'))
